@@ -1,7 +1,7 @@
 ---
 - name: Install Pacemaker cluster packages to all nodes
   apt:
-    name: "{{ cluster_node_is_remote | bool | ternary(pacemaker_remote_packages, pacemaker_packages) }}"
+    name: "{{ cluster_node_is_remote | bool | ternary(pacemaker_remote_packages, pacemaker_packages, pcs_module_dependencies) }}"
     state: 'present'
 
 - name: Check if Corosync configuration is default configaration

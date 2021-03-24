@@ -5,6 +5,8 @@ pacemaker_packages:
 pacemaker_remote_packages:
  - pcs
  - pacemaker-remote
+pcs_module_dependencies:
+  - python3-distutils
 
 cluster_configure_fence_xvm: false
 cluster_firewall: false
